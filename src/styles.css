@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+div.card-header {
+ font-size: large;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black
+}
+
+.navbar ul {
+  padding: 0;
+}
+
+.navbar ul li {
+  list-style: none;
+  padding: 1rem;
+  font-size: 24px;
+}
+
+.navbar .links ul {
+  display: flex;
+}
+
+.navbar .logo ul li a {
+  color: #ffffff8a;
+  text-decoration: none;
+}
+
+.navbar .links ul li a {
+  color: #ffffffc7;
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  top: 1.2rem;
+  right: 1rem;
+}
+
+.menu .bar {
+  width: 50px;
+  height: 7px;
+  margin: 3px;
+  background-color: #ffffff8a;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: flex;
+  }
+
+  .navbar .links {
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

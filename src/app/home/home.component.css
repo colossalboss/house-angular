@@ -1,0 +1,131 @@
+.all-images {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-div {
+  width: 30%;
+  margin: 1rem 0;
+}
+
+.image-div img {
+  width: 100%;
+}
+
+.intro-div {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+
+.intro-header {
+  width: 45%;
+  padding: 2rem 0;
+
+}
+
+.intro-header h1 {
+  font-size: 48px;
+}
+
+.action-div {
+  width: 45%;
+  padding: 2rem 0;
+}
+
+.action-div input {
+  width: 60%;
+  padding: .5rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+.latest,
+.more {
+  width: 80%;
+  margin: auto;
+}
+
+.rent-btn {
+  background-color: #8bc34a;
+}
+
+#tenant-btn {
+  background-color: #009688;
+}
+
+p {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 900px) {
+  .action-div input {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .image-div {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .intro-header h1 {
+    font-size: 36px;
+  }
+
+  .action-div input {
+    padding: .3rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .all-images {
+    width: 100%;
+  }
+
+  .images-con {
+    padding: 2rem;
+  }
+
+  .intro-con {
+    width: 100%;
+    /* padding: 2rem; */
+  }
+
+  .image-div {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .image-div {
+    width: 100%;
+    margin: auto;
+  }
+
+  .intro-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-header,
+  .action-div {
+    width:80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image-div {
+    width: 100%;
+  }
+}
+
