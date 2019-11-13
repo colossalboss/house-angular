@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228142/House/12_t55w9y.jpg",
+    "location": "Amassoma, Bayelsa State",
+    "price": 300,
+    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+
+  },
+  {
+    "id": 2,
+    "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228138/House/15_ekgqlq.jpg",
+    "location": "Amassoma, Bayelsa State",
+    "price": 300,
+    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+
+  },
+  {
+    "id": 3,
+    "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573227994/House/2_lnpgxt.jpg",
+    "location": "Amassoma, Bayelsa State",
+    "price": 300,
+    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+
+  },
+  {
+    "id": 4,
+    "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228140/House/11_nocmu3.jpg",
+    "location": "Amassoma, Bayelsa State",
+    "price": 300,
+    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+
+  },
+  {
+    "id": 5,
+    "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228139/House/10_rlugcj.jpg",
+    "location": "Amassoma, Bayelsa State",
+    "price": 300,
+    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+
+  },
+  {
+    "id": 6,
+    "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228139/House/17_iju9uz.jpg",
+    "location": "Amassoma, Bayelsa State",
+    "price": 300,
+    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+
+  }
+]

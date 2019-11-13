@@ -33,36 +33,20 @@
     <h2>Latest Listings</h2>
   </div>
   <div class="images-con">
-    <div class="all-images">
-      <div class="image-div">
-        <div>
-          <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228142/House/12_t55w9y.jpg" alt="Image">
-        </div>
-      </div>
-      <div class="image-div">
-        <div>
-          <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228142/House/8_yjkda6.jpg" alt="Image">
-        </div>
-      </div>
-      <div class="image-div">
-        <div>
-          <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228141/House/9_mkpmg0.jpg" alt="Image">
-        </div>
-      </div>
-      <div class="image-div">
-        <div>
-          <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228140/House/11_nocmu3.jpg" alt="Image">
-        </div>
-      </div>
-      <div class="image-div">
-        <div>
-          <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228139/House/10_rlugcj.jpg" alt="Image">
-        </div>
-      </div>
-      <div class="image-div">
-        <div>
-          <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228139/House/17_iju9uz.jpg" alt="Image">
-        </div>
+    <div class="all-images" *ngIf="availables">
+      <div class="images-div" *ngFor="let house of availables">
+        <a href="#">
+          <div>
+            <img [src]="house.src" alt="Image of a House">
+          </div>
+          <div>
+            <div class="details">
+              <p class="text-truncated">Price: {{ house.price }}</p>
+              <p class="text-truncated"><strong color="primary">Location</strong>: {{ house.location }}</p>
+              <p class="text-truncated"><strong>Description</strong>: {{ house.description }}</p>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>

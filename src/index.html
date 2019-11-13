@@ -9,42 +9,12 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <div class="navbar">
-        <div class="logo">
-          <ul>
-            <li class="home">
-              <a href="">Home</a>
-            </li>
-          </ul>
-        </div>
-        <div class="links">
-          <ul class="list">
-            <li><a href="#">Rent a House</a></li>
-            <li><a href="#">Give a House</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Login</a></li>
-          </ul>
-        </div>
-        <div class="menu" (click)="toggleMenu()">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </div>
-  </div>
+
   <pm-root></pm-root>
-
-  <script>
-    let menu = document.querySelector('.menu');
-    let links = document.querySelector('.links');
-
-    menu.addEventListener('click', (e) => {
-      links.classList.toggle('active');
-    });
-
-  </script>
+  
 </body>
 </html>

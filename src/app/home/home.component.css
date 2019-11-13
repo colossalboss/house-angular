@@ -1,18 +1,38 @@
+.images-div {
+  width: 30%;
+  margin: 1rem 0;
+}
 .all-images {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.image-div {
-  width: 30%;
-  margin: 1rem 0;
+.details {
+  width: 100%;
 }
 
-.image-div img {
+.images-div a {
+  text-decoration: none;
+  color: #222;
+}
+
+.images-div:hover {
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.details .text-truncated {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.images-div img {
   width: 100%;
+  border-radius: 8px;
 }
 
 .intro-div {
