@@ -35,8 +35,8 @@
   <div class="images-con">
     <div class="all-images" *ngIf="availables">
       <div class="images-div" *ngFor="let house of availables">
-        <a href="#">
-          <div>
+        <a [routerLink]="['/houses', house.id]">
+          <div class="d-image">
             <img [src]="house.src" alt="Image of a House">
           </div>
           <div>
@@ -52,5 +52,34 @@
   </div>
   <div class="more">
     <h2><a href="#">See more</a></h2>
+  </div>
+
+  <div class="ceo-section">
+    <div class="flexy-display">
+      <div class="ceo">
+        <div class="ceo-image">
+          <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1566547682/my-photo/official_wvyphq.png" alt="CEO of Houze">
+        </div>
+        <div>
+          <h2>Ogbara Godstar</h2>
+          <p>CEO Houze</p>
+        </div>
+      </div>
+      <div class="message">
+        <div>
+          <h2>Our Mission</h2>
+        </div>
+        <div>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis iste moll
+            itia quae distinctio ad voluptatibus reiciendis quis amet, eveniet rerum repe
+            llat maxime consequuntur expedita? Consequuntur minima quas veritatis at maxime
+            eius illum esse corrupti natus sint! Magni, totam quidem laboriosam commodi dolore s
+            unt corporis? Ipsum debitis quod cupiditate commodi iste explicabo soluta quia consequatur
+            dolorem? Adipisci maxime sed hic distinctio provident aperiam molestiae iusto aliquid amet nemo
+            modi dolores voluptas consequuntur facilis consectetur optio atque eum harum commodi, quod fuga
+            voluptate sequi placeat. Cum inventore quam eum, libero temporibus maxime pariatur,</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

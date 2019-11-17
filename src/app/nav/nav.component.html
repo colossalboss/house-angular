@@ -20,13 +20,14 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>APM</span>
+      <span>Houze</span>
       <span class="spacer"></span>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item [routerLink]="['/houses']">Home</a>
+      <a mat-list-item [routerLink]="['/register']">Register</a>
+      <a mat-list-item [routerLink]="['/login']">Login</a>
     </mat-toolbar>
     <!-- Add Content Here -->
+
     <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>

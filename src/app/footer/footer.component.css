@@ -32,9 +32,12 @@
 }
 
 .footer-con {
+  position: relative;
+  bottom: 0;
   width: 100%;
   background-color: #000;
   color: #fff;
+  margin-top: 3rem;
 }
 
 .footer {

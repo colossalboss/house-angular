@@ -25,3 +25,10 @@ mat-toolbar a {
   color: #fff;
   text-decoration: none;
 }
+
+@media screen and (max-width: 400px) {
+  mat-toolbar a {
+    margin: 0 0.5rem;
+    font-size: 18px;
+  }
+}

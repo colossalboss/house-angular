@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material';
+
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome.component';
@@ -15,6 +18,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { HouseDetailsComponent } from './house-details/house-details.component';
+import { RegisterComponent } from './register/register.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +31,9 @@ import {HttpClientModule} from '@angular/common/http';
     WelcomeComponent,
     HomeComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    HouseDetailsComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +45,17 @@ import {HttpClientModule} from '@angular/common/http';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent},
+      {path: 'houses', component: HomeComponent},
+      {path: 'houses/:id', component: HouseDetailsComponent},
+      {path: 'register', component: RegisterComponent}
+    ])
   ],
   bootstrap: [AppComponent]
 })
