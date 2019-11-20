@@ -3,11 +3,26 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>By Schools</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item (click)="onClick('ndu')">NDU</a>
+      <a mat-list-item [routerLink]="['/school', 'uniport']">Uniport</a>
+      <a mat-list-item href="#">Unilag</a>
+      <a mat-list-item href="#">Uniabuja</a>
+      <a mat-list-item href="#">Unical</a>
+      <a mat-list-item href="#">Delsu</a>
+      <a mat-list-item href="#">FUO</a>
+      <a mat-list-item href="#">Uniben</a>
+      <a mat-list-item href="#">UNN</a>
+      <a mat-list-item href="#">UST</a>
+      <a mat-list-item href="#">AOU</a>
+      <a mat-list-item href="#">ABSU</a>
+      <a mat-list-item href="#">EBSU</a>
+      <a mat-list-item href="#">FUTA</a>
+      <a mat-list-item href="#">YSU</a>
+      <a mat-list-item href="#">BSU</a>
+      <a mat-list-item href="#">BUK</a>
+      <a mat-list-item href="#">ANSU</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,6 +42,7 @@
       <a mat-list-item [routerLink]="['/login']">Login</a>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <!-- <pm-home [event]="byShool"></pm-home> -->
 
     <ng-content></ng-content>
   </mat-sidenav-content>

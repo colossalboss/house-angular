@@ -1,56 +1,80 @@
 [
   {
     "type": "One bedroom flat",
+    "school": "NDU",
     "id": 1,
+    "name": "Godstar",
+    "transaction": "Rent",
     "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228142/House/12_t55w9y.jpg",
     "location": "Amassoma, Bayelsa State",
     "price": 300,
-    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+    "phone": 1234567890,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
 
   },
   {
     "type": "One bedroom flat",
     "id": 2,
+    "school": "NDU",
+    "name": "Godstar",
+    "transaction": "Rent",
     "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228138/House/15_ekgqlq.jpg",
     "location": "Amassoma, Bayelsa State",
     "price": 300,
-    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+    "phone": 1234567890,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
 
   },
   {
     "type": "One bedroom flat",
+    "transaction": "Rent",
     "id": 3,
+    "name": "Godstar",
+    "school": "NDU",
     "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573227994/House/2_lnpgxt.jpg",
     "location": "Amassoma, Bayelsa State",
     "price": 300,
-    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+    "phone": 1234567890,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
 
   },
   {
     "type": "One bedroom flat",
     "id": 4,
+    "name": "Godstar",
+    "transaction": "Rent",
+    "school": "Uniport",
     "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228140/House/11_nocmu3.jpg",
     "location": "Amassoma, Bayelsa State",
     "price": 300,
-    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+    "phone": 1234567890,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
 
   },
   {
     "type": "One bedroom flat",
     "id": 5,
+    "name": "Godstar",
+    "transaction": "Rent",
+    "school": "Uniport",
     "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228139/House/10_rlugcj.jpg",
     "location": "Amassoma, Bayelsa State",
     "price": 300,
-    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+    "phone": 1234567890,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
 
   },
   {
     "type": "One bedroom flat",
     "id": 6,
+    "name": "Godstar",
+    "transaction": "Rent",
+    "school": "NDU",
     "src": "https://res.cloudinary.com/rumplestiltskin/image/upload/v1573228139/House/17_iju9uz.jpg",
     "location": "Amassoma, Bayelsa State",
     "price": 300,
-    "description": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
+    "phone": 1234567890,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cumque expedita pariatur dolor similique minima deserunt nemo illum aspernatur atque a, quidem repellendus ad suscipit saepe neque, quibusdam quos ipsa?"
 
   }
 ]

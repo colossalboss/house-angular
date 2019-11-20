@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material';
+import {FormsModule, NgForm} from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,9 @@ import { HouseDetailsComponent } from './house-details/house-details.component';
 import { RegisterComponent } from './register/register.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { LoginComponent } from './login/login.component';
+import { TenantComponent } from './tenant/tenant.component';
+import { SchoolComponent } from './school/school.component';
 
 
 @NgModule({
@@ -33,7 +37,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FooterComponent,
     NavComponent,
     HouseDetailsComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    TenantComponent,
+    SchoolComponent
   ],
   imports: [
     BrowserModule,
@@ -50,11 +57,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'houses', component: HomeComponent},
       {path: 'houses/:id', component: HouseDetailsComponent},
-      {path: 'register', component: RegisterComponent}
+      {path: 'register', component: RegisterComponent},
+      {path: 'login', component: LoginComponent},
+      {path: 'tenant', component: TenantComponent},
+      {path: 'school/:school', component: TenantComponent},
     ])
   ],
   bootstrap: [AppComponent]

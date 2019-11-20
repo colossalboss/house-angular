@@ -1,0 +1,43 @@
+<div class="over-con">
+  <div class="inner-con">
+    <div><h2>Register</h2></div>
+
+    <form [formGroup]="registerForm">
+      <div class="example-container">
+        <mat-form-field>
+          <input type="text"
+            id="name"
+            matInput
+            formControlName="name"
+            [(ngModel)]="user.name"
+            placeholder="Enter your name"
+            />
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text"
+            id="email"
+            matInput
+            formControlName="email"
+            [(ngModel)]="user.email"
+            placeholder="Enter your email"
+            />
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text"
+            id="password"
+            matInput
+            formControlName="password"
+            [(ngModel)]="user.password"
+            placeholder="Enter your password"
+            />
+        </mat-form-field>
+
+        <button matInput type="submit">Register</button>
+      </div>
+    </form>
+    <div class="action">
+      <p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
+    </div>
+  </div>
+</div>
+

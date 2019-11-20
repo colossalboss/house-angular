@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.over-con {
+  padding: 2rem;
+  margin: 4rem 0;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-con {
+  width: 70%;
+  margin: auto;
+}
+
+.example-container > * {
+  width: 100%
+}
+
+.example-container button {
+  padding: .5rem;
+  width: 40%;
+  margin: auto;
+  background: #33333385;
+  color: #fff;
+  font-size: 24px;
+}
+
+.example-container button:hover {
+  background: #333;
+  cursor: pointer;
+}
+
+.action {
+  text-align: center;
+  padding: .5rem 0;
+}
+
+@media screen and (max-width: 400px) {
+  .inner-con {
+    width: 100%;
+  }
+}
+

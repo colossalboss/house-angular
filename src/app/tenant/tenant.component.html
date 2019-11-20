@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="header">
+    <h2>Upload details of your house</h2>
+  </div>
+
+  <form #form="ngForm">
+    <div class="form-group">
+      <label for="name">Fullname</label>
+      <input type="text" class="form-control" id="name" name="name"
+              aria-describedby="emailHelp" placeholder="Enter name" [(ngModel)]="houseForRent.name">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" name="phone"
+              aria-describedby="emailHelp" placeholder="Enter phone" [(ngModel)]="houseForRent.phone">
+    </div>
+
+    <div class="custom-file">
+      <input type="file" name="image" class="custom-file-input" id="image" accept="image/*" [(ngModel)]="houseForRent.image">
+      <label class="custom-file-label" for="image">Choose file</label>
+    </div>
+
+    <div class="form-group">
+      <label for="transactionType">Transaction Type</label>
+      <select class="form-control" id="transactionType" name="transactionType" [(ngModel)]="houseForRent.transactionType">
+        <option>Rent</option>
+        <option>Sale</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="transactionType">School</label>
+      <select class="form-control" id="school" name="school" [(ngModel)]="houseForRent.school">
+        <option>Uniport</option>
+        <option>Uniben</option>
+        <option>Unical</option>
+        <option>UniLag</option>
+        <option>Delsu</option>
+        <option>UST</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="houseType">House Type</label>
+      <input type="text" class="form-control" id="houseType" name="houseType"
+              aria-describedby="emailHelp" placeholder="Enter house type" [(ngModel)]="houseForRent.houseType">
+    </div>
+
+    <div class="form-group">
+      <label for="price">Amount (#)</label>
+      <input type="number" class="form-control" id="price" name="price"
+              aria-describedby="emailHelp" placeholder="Enter amount" [(ngModel)]="houseForRent.price">
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" class="form-control" id="location" name="location"
+              aria-describedby="emailHelp" placeholder="Enter location" [(ngModel)]="houseForRent.location">
+    </div>
+
+    <div class="form-group">
+      <label for="description">House Description</label>
+      <textarea class="form-control" id="description" name="description" rows="3"
+              placeholder="Describe your house" [(ngModel)]="houseForRent.description"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <div class="else">
+    <p>Want a house? <a >Rent One</a></p>
+  </div>
+</div>

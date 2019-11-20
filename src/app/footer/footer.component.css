@@ -54,6 +54,10 @@
   padding: 1rem 0;
 }
 
+.footer-inside {
+  padding: 1rem 0 0 0;
+}
+
 
 @media screen and (max-width: 650px) {
   .footer {

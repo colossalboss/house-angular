@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HousesService } from '../houses.service';
 import {Router} from '@angular/router';
 
@@ -9,14 +9,15 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  availables;
+  @Input() event: any;
+
+  availables: any;
 
   constructor(private houses: HousesService, public router: Router) { }
 
   ngOnInit() {
     this.houses.getHouses().subscribe(homes => {
       this.availables = homes;
-      console.log(this.availables);
     });
   }
 

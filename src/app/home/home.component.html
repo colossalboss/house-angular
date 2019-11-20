@@ -1,52 +1,55 @@
-<div class="container">
-  <div class="intro-con">
-    <div class="intro-div">
-        <div class="intro-header">
-          <div>
-            <h1>Make Yourself Comfortable</h1>
-          </div>
-          <div>
-            <p><a href="#">Get Started</a></p>
-          </div>
-        </div>
-        <div class="action-div">
-          <div class="looking">
-            <div>
-              <p>Looking for a house?</p>
-            </div>
-            <div class="rent">
-              <input type="submit" value="Rent a House" class="rent-btn">
-            </div>
-          </div>
-          <div class="give">
-            <div>
-              <p>Have a house you want to rent out?</p>
-            </div>
-            <div class="rent-out">
-              <input type="submit" name="" id="tenant-btn" value="Get a Tenant">
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="container1">
+
+  <div class="bg">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome!</h1>
+      <p class="lead">This is a simple platform, a simple housing company for taking care of everything housing for you.</p>
+      <hr class="my-4">
+      <p>Here we make your comfort our priority.</p>
+      <a class="btn btn-primary btn-lg" [routerLink]="['/register']" role="button">Get Started</a>
+    </div>
   </div>
+
+
+  <!-- <div class="imag">
+    <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1574284751/House/fine_uy2wrj.jpg" alt="Background">
+  </div> -->
+
+  <div class="embed-responsive embed-responsive-16by9">
+    <video autoplay loop controls [muted]="'muted'" [controls]="false">
+      <source src="https://res.cloudinary.com/rumplestiltskin/video/upload/v1574282490/House/y2mate.com_-_the_hadlock_short_clip_30_sec_e1EgonEmDTQ_240p_f6lqvd.mp4" type="video/mp4">
+      <source src="https://res.cloudinary.com/rumplestiltskin/video/upload/v1574282490/House/y2mate.com_-_the_hadlock_short_clip_30_sec_e1EgonEmDTQ_240p_f6lqvd.mp4" type="video/webm">
+      <p>Your browser doesn't support HTML5 video. Here is</p>
+    </video>
+  </div>
+
+  <div class="no-bg">
+    <div class="card no-bd">
+      <div class="card-header">
+        Landlord or Tenant
+      </div>
+      <div class="card-body links">
+        <h5 class="card-title">We have something for you</h5>
+        <p class="card-text">Are you looking for a house or want to give out a house for cash?</p>
+        <a href="#" class="btn btn-primary">Find a House</a> OR
+        <a href="#" class="btn btn-primary" [routerLink]="['/tenant']">Get a Tenant</a>
+
+      </div>
+    </div>
+  </div>
+
   <div class="latest">
     <h2>Latest Listings</h2>
   </div>
   <div class="images-con">
     <div class="all-images" *ngIf="availables">
-      <div class="images-div" *ngFor="let house of availables">
-        <a [routerLink]="['/houses', house.id]">
-          <div class="d-image">
-            <img [src]="house.src" alt="Image of a House">
-          </div>
-          <div>
-            <div class="details">
-              <p class="text-truncated">Price: {{ house.price }}</p>
-              <p class="text-truncated"><strong color="primary">Location</strong>: {{ house.location }}</p>
-              <p class="text-truncated"><strong>Description</strong>: {{ house.description }}</p>
-            </div>
-          </div>
-        </a>
+      <div *ngFor="let house of availables" class="card" style="width: 18rem;">
+        <img src="{{ house.src }}" class="card-img-top" alt="House">
+        <div class="card-body">
+          <h5 class="card-title">{{ house.type }}</h5>
+          <p class="card-text text-truncated">{{ house.description }}</p>
+          <a [routerLink]="['/houses', house.id]" class="btn btn-primary">View Details</a>
+        </div>
       </div>
     </div>
   </div>

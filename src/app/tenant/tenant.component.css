@@ -1,0 +1,13 @@
+.container {
+  width: 60%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.header {
+  margin: 2rem 0;
+}
+
+.else {
+  padding: 1rem 0;
+}
