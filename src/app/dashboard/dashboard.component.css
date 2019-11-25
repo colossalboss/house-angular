@@ -1,0 +1,24 @@
+.hold {
+  width: 70%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.over {
+  background: cornflowerblue;
+}
+
+.center {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.users {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 40%;
+}

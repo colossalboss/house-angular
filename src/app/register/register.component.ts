@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterModel } from '../model/register.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {HousesService} from '../houses.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'pm-register',
@@ -13,7 +15,9 @@ export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private housesService: HousesService,
+              private router: Router) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -30,6 +34,19 @@ export class RegisterComponent implements OnInit {
         Validators.maxLength(30)
       ]]
     });
+  }
+
+  saveUser(val: any) {
+    console.log(val);
+    this.housesService.registerUser(val).subscribe(
+      (data: any) => {
+        console.log(data);
+        if (data.success) {
+          this.router.navigate(['dashboard']);
+        }
+      },
+      (err: any) => console.log(err)
+    );
   }
 
 }

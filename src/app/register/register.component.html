@@ -2,7 +2,7 @@
   <div class="inner-con">
     <div><h2>Register</h2></div>
 
-    <form [formGroup]="registerForm">
+    <form [formGroup]="registerForm" (submit)="saveUser(registerForm.value)">
       <div class="example-container">
         <mat-form-field>
           <input type="text"

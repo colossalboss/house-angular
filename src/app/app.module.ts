@@ -27,6 +27,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { LoginComponent } from './login/login.component';
 import { TenantComponent } from './tenant/tenant.component';
 import { SchoolComponent } from './school/school.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
@@ -40,7 +42,8 @@ import { SchoolComponent } from './school/school.component';
     RegisterComponent,
     LoginComponent,
     TenantComponent,
-    SchoolComponent
+    SchoolComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -66,8 +69,10 @@ import { SchoolComponent } from './school/school.component';
       {path: 'login', component: LoginComponent},
       {path: 'tenant', component: TenantComponent},
       {path: 'school/:school', component: TenantComponent},
+      {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]}
     ])
   ],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

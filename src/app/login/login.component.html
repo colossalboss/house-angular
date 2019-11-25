@@ -15,7 +15,7 @@
               placeholder="Password" required [(ngModel)]="loginDetails.password">
     </div>
 
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" (click)="login(form)" class="btn btn-primary">Login</button>
   </form>
 
   <div>

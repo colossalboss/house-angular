@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ForRent} from '../for-rent';
-import {NgModel} from '@angular/forms';
+import {NgModel, NgForm} from '@angular/forms';
+import {HousesService} from '../houses.service';
 
 @Component({
   selector: 'pm-tenant',
@@ -22,9 +23,20 @@ export class TenantComponent implements OnInit {
     description: ''
   };
 
-  constructor() { }
+  constructor(private housesService: HousesService) { }
 
   ngOnInit() {
+  }
+
+  saveHouse(form: NgForm) {
+    const newHouse = form.value;
+    newHouse.id = 1;
+    console.log(newHouse);
+
+    this.housesService.addUser({'name': 'Godstar', 'job': 'Developer'}).subscribe(
+      (data: any) => console.log(data),
+      (err: any) => console.log(err)
+    )
   }
 
 }

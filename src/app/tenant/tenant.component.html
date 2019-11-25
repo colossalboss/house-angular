@@ -65,7 +65,7 @@
               placeholder="Describe your house" [(ngModel)]="houseForRent.description"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="saveHouse(form)">Submit</button>
   </form>
 
   <div class="else">

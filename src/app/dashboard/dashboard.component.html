@@ -1,0 +1,30 @@
+<div class="over-top">
+  <div class="over">
+    <div class="hold">
+      <div class="center">
+        <h2>Narrow your Search</h2>
+      </div>
+      <form action="">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search this blog">
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="users">
+    <div *ngFor="let user of users?.data" class="card" style="width: 18rem;">
+      <img src="{{ user.avatar }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ user.first_name }}</h5>
+        <p class="card-text">{{ user.email }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,8 @@ import {format} from 'url';
 import {NgForm, NgModel} from '@angular/forms';
 import {FormsModule} from '@angular/forms';
 import {LoginDetails} from '../login-details';
+import {HousesService} from '../houses.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'pm-login',
@@ -17,18 +19,40 @@ export class LoginComponent implements OnInit {
   };
 
 
-  constructor() { }
+  constructor(private housesService: HousesService,
+              private router: Router) { }
 
   onSubmit(form: NgForm): void {
     if (form.valid) {
-      console.log(`Form is valid: ${form.value}`);
-      alert('valid');
+      this.housesService.loginUser(form.value).subscribe(
+        (data: any) => {
+          if (data.token) {
+            this.router.navigate(['dashboard']);
+            this.housesService.setLogIn(true);
+          } else {
+            alert(data.error);
+          }
+        },
+        (err: any) => console.log(err)
+      );
     } else {
       alert('invalid');
     }
   }
 
   ngOnInit() {
+    this.housesService.getUsers().subscribe(
+      (data: any) => {
+        console.log(data);
+
+        //not working
+        if (!data.token) {
+          localStorage.removeIteam('loggedIn');
+        }
+      }
+    );
   }
+
+
 
 }
