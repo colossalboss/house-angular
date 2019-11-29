@@ -3,10 +3,25 @@
   <div class="bg">
     <div class="jumbotron">
       <h1 class="display-4">Welcome!</h1>
-      <p class="lead">This is a simple platform, a simple housing company for taking care of everything housing for you.</p>
+      <p class="lead fs">This is a simple platform, a simple housing company for taking care of everything housing for you.</p>
       <hr class="my-4">
-      <p>Here we make your comfort our priority.</p>
-      <a class="btn btn-primary btn-lg" [routerLink]="['/register']" role="button">Get Started</a>
+      <p class="fs">Here we make your comfort our priority.</p>
+      <a class="btn btn-primary btn-lg" (click)="goToLogin()" role="button">Get Started</a>
+    </div>
+  </div>
+
+
+  <div class="no-bg">
+    <div class="card no-bd">
+      <div class="card-header hd">
+        Landlord or Tenant
+      </div>
+      <div class="card-body links">
+        <h5 class="card-title">We have something for you</h5>
+        <p class="card-text">Are you looking for a house or want to give out a house for cash?</p>
+        <a (click)="goToLogin" class="btn btn-primary pr">Find a House</a> OR
+        <a class="btn btn-primary pr" (click)="findAHouse()">Get a Tenant</a>
+      </div>
     </div>
   </div>
 
@@ -22,21 +37,20 @@
       <p>Your browser doesn't support HTML5 video. Here is</p>
     </video>
   </div>
-
+<!--
   <div class="no-bg">
     <div class="card no-bd">
-      <div class="card-header">
+      <div class="card-header hd">
         Landlord or Tenant
       </div>
       <div class="card-body links">
         <h5 class="card-title">We have something for you</h5>
         <p class="card-text">Are you looking for a house or want to give out a house for cash?</p>
-        <a [routerLink]="['/dashboard']" class="btn btn-primary">Find a House</a> OR
-        <a href="#" class="btn btn-primary" [routerLink]="['/tenant']">Get a Tenant</a>
-
+        <a (click)="goToLogin" class="btn btn-primary pr">Find a House</a> OR
+        <a class="btn btn-primary pr" (click)="findAHouse()">Get a Tenant</a>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="latest">
     <h2>Latest Listings</h2>
@@ -48,24 +62,26 @@
         <div class="card-body">
           <h5 class="card-title">{{ house.type }}</h5>
           <p class="card-text text-truncated">{{ house.description }}</p>
-          <a [routerLink]="['/houses', house.id]" class="btn btn-primary">View Details</a>
+          <a [routerLink]="['/houses', house.id]" class="btn btn-primary pr">View Details</a>
         </div>
       </div>
     </div>
   </div>
   <div class="more">
-    <h2><a href="#">See more</a></h2>
+    <h2><a id="see-more" (click)="goToLogin()">See more</a></h2>
   </div>
 
   <div class="ceo-section">
     <div class="flexy-display">
-      <div class="ceo">
-        <div class="ceo-image">
+      <div class="ceo parent">
+        <!-- <div class="ceo-image">
           <img src="https://res.cloudinary.com/rumplestiltskin/image/upload/v1566547682/my-photo/official_wvyphq.png" alt="CEO of Houze">
-        </div>
-        <div>
-          <h2>Ogbara Godstar</h2>
-          <p>CEO Houze</p>
+        </div> -->
+        <div class="child">
+          <div class="on-hover">
+            <h2>Ogbara Godstar</h2>
+            <p>CEO Houze</p>
+          </div>
         </div>
       </div>
       <div class="message">

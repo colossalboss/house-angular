@@ -1,19 +1,45 @@
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{ item.type }}</mat-card-title>
-    <mat-card-subtitle>${{ item.price }}</mat-card-subtitle>
-    <mat-card-subtitle>{{ item.location }}</mat-card-subtitle>
+    <mat-card-title>
+      <i class="fa fa-home" aria-hidden="true"></i>
+      {{ item.type }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      <i class="fa fa-money" aria-hidden="true">  </i>
+      ${{ item.price }}
+    </mat-card-subtitle>
+    <mat-card-subtitle>
+      <i class="fa fa-globe" aria-hidden="true"></i>
+      {{ item.location }}
+    </mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image [src]="item.src" alt="Photo of a House">
   <mat-card-content>
     <p>
       {{ item.description }}
     </p>
+    <p>
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      <strong>  Owner: </strong> {{ item.name }}
+    </p>
+    <p>
+      <i class="fa fa-question" aria-hidden="true"></i>
+      <strong>  For: </strong> {{ item.transaction }}
+    </p>
+    <p>
+      <i class="fa fa-phone" aria-hidden="true"></i>
+      <strong>  Call: </strong> {{ item.phone }}
+    </p>
+    <p>
+      <i class="fa fa-graduation-cap" aria-hidden="true"> </i>
+      <strong>  School: </strong> {{ item.school }}
+    </p>
   </mat-card-content>
   <mat-card-actions>
+    <hr>
     <button mat-button>LIKE</button>
     <button mat-button>SHARE</button>
-    <button mat-button><a [routerLink]="['/houses']">BACK</a></button>
+    <!-- <button mat-button><a [routerLink]="['/houses']">BACK</a></button> -->
   </mat-card-actions>
 </mat-card>

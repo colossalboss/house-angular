@@ -26,9 +26,26 @@ mat-toolbar a {
   text-decoration: none;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
+
 @media screen and (max-width: 400px) {
   mat-toolbar a {
     margin: 0 0.5rem;
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 590px) {
+  #none {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hide {
+    display: none !important;
   }
 }

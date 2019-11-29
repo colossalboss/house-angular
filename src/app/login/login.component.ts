@@ -23,34 +23,32 @@ export class LoginComponent implements OnInit {
               private router: Router) { }
 
   onSubmit(form: NgForm): void {
+    // alert('hi');
     if (form.valid) {
+      console.log('valid form');
       this.housesService.loginUser(form.value).subscribe(
         (data: any) => {
-          if (data.token) {
-            this.router.navigate(['dashboard']);
+          if (data.success) {
             this.housesService.setLogIn(true);
+            this.router.navigate(['dashboard']);
           } else {
+            console.log('not a user');
             alert(data.error);
           }
         },
         (err: any) => console.log(err)
       );
     } else {
-      alert('invalid');
+      alert('invalid form value');
     }
   }
 
   ngOnInit() {
-    this.housesService.getUsers().subscribe(
-      (data: any) => {
-        console.log(data);
-
-        //not working
-        if (!data.token) {
-          localStorage.removeIteam('loggedIn');
-        }
-      }
-    );
+    // this.housesService.getUsers().subscribe(
+    //   (data: any) => {
+    //     console.log(data);
+    //   }
+    // );
   }
 
 

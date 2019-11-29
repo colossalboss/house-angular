@@ -11,3 +11,18 @@
 .else {
   padding: 1rem 0;
 }
+
+.submitted {
+  width: 90%;
+  position: relative;
+  padding: 10rem 0;
+  margin: auto;
+  text-align: center;
+  max-width: 450px;
+  background-color: #e9dcff;
+  color: #2fff67;
+}
+
+.submitted a {
+  text-decoration: underline;
+}

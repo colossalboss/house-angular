@@ -6,7 +6,7 @@
       </div>
       <form action="">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search this blog">
+          <input type="text" class="form-control" placeholder="Search by type or location">
           <div class="input-group-append">
             <button class="btn btn-secondary" type="button">
               <i class="fa fa-search"></i>
@@ -16,14 +16,14 @@
       </form>
     </div>
   </div>
-
   <div class="users">
-    <div *ngFor="let user of users?.data" class="card" style="width: 18rem;">
-      <img src="{{ user.avatar }}" class="card-img-top" alt="...">
+    <div *ngFor="let user of users" class="card" style="width: 18rem;">
+      <img src="{{ user.src }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ user.first_name }}</h5>
-        <p class="card-text">{{ user.email }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{ user.type}}</h5>
+        <p class="card-text">{{ user.price }}</p>
+        <p class="card-text">{{ user.location }}</p>
+        <a [routerLink]="['house', user.id]" class="btn btn-primary">View details</a>
       </div>
     </div>
   </div>

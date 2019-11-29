@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HousesService } from '../houses.service';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'pm-home',
@@ -13,7 +14,9 @@ export class HomeComponent implements OnInit {
 
   availables: any;
 
-  constructor(private houses: HousesService, public router: Router) { }
+  constructor(private houses: HousesService,
+              public router: Router,
+              private user: UserService) { }
 
   ngOnInit() {
     this.houses.getHouses().subscribe(homes => {
@@ -23,6 +26,30 @@ export class HomeComponent implements OnInit {
 
   onSelect(house) {
     this.router.navigate(['/houses', house.id]);
+  }
+
+  goToLogin() {
+    this.user.isLoggedIn().subscribe(
+      (res: any) => {
+        if (res.status) {
+          this.router.navigate(['dashboard']);
+        } else {
+          this.router.navigate(['login']);
+        }
+      }
+    );
+  }
+
+  findAHouse() {
+    this.user.isLoggedIn().subscribe(
+      (res: any) => {
+        if (res.status) {
+          this.router.navigate(['tenant']);
+        } else {
+          this.router.navigate(['login']);
+        }
+      }
+    );
   }
 
 }

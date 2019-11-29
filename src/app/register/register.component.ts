@@ -37,16 +37,21 @@ export class RegisterComponent implements OnInit {
   }
 
   saveUser(val: any) {
+    console.log(this.registerForm.valid);
+
     console.log(val);
-    this.housesService.registerUser(val).subscribe(
-      (data: any) => {
-        console.log(data);
-        if (data.success) {
-          this.router.navigate(['dashboard']);
-        }
-      },
-      (err: any) => console.log(err)
-    );
+    if (this.registerForm.valid) {
+      this.housesService.registerUser(val).subscribe(
+        (data: any) => {
+          console.log(data);
+          if (data.sucess) {
+            console.log('loggeg in');
+            this.router.navigate(['dashboard']);
+          }
+        },
+        (err: any) => console.log(err)
+      );
+    }
   }
 
 }

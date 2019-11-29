@@ -1,4 +1,10 @@
-<div class="container">
+<div class="submitted" *ngIf="submitted">
+  <h2>Uploaded Successfully</h2>
+  <a [routerLink]="['dashboard']">Find a house</a>
+
+</div>
+<div class="container" *ngIf="!submitted">
+
   <div class="header">
     <h2>Upload details of your house</h2>
   </div>
@@ -16,9 +22,10 @@
               aria-describedby="emailHelp" placeholder="Enter phone" [(ngModel)]="houseForRent.phone">
     </div>
 
-    <div class="custom-file">
-      <input type="file" name="image" class="custom-file-input" id="image" accept="image/*" [(ngModel)]="houseForRent.image">
-      <label class="custom-file-label" for="image">Choose file</label>
+    <div class="form-group">
+      <label for="image">Link to house</label>
+      <input type="url" class="form-control" id="image" name="image"
+              aria-describedby="emailHelp" placeholder="Enter phone" [(ngModel)]="houseForRent.image">
     </div>
 
     <div class="form-group">
@@ -69,6 +76,6 @@
   </form>
 
   <div class="else">
-    <p>Want a house? <a >Rent One</a></p>
+    <p>Want a house? <a (click)="goToLogin()">Rent One</a></p>
   </div>
 </div>

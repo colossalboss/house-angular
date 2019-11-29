@@ -1,31 +1,38 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HousesService {
 
-  private loggedInStatus = JSON.parse(localStorage.getItem('loggedIn') || 'false');
+  private loggedInStatus;
 
   constructor(private http: HttpClient) { }
 
+  housesfromDB(): Observable<any> {
+    return this.http.get('/api/houses');
+  }
+
+  postHouseToDB(obj: any): Observable<any> {
+    return this.http.post('/api/houses', obj);
+  }
+
   setLogIn(val: boolean) {
     this.loggedInStatus = val;
-    localStorage.setItem('loggedIn', 'true');
   }
 
   get isLoggedIn() {
-    return JSON.parse(localStorage.getItem('loggedIn') || this.loggedInStatus.toString());
+    return this.http.get('/api/isLogggedin');
   }
 
   getHouses(): Observable<any> {
     return this.http.get('./assets/houses.json');
   }
 
-  getUsers(): Observable<any> {
-    return this.http.get('https://reqres.in/api/users?page=2');
+  homes(): Observable<any> {
+    return this.http.get('/api/houses');
   }
 
   addUser(newUser: any): Observable<any> {
@@ -37,7 +44,7 @@ export class HousesService {
   }
 
   loginUser(details: any): Observable<any> {
-    return this.http.post('https://reqres.in/api/login', details, {
+    return this.http.post('/api/login', details, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })

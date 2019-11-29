@@ -19,9 +19,11 @@ export class HouseDetailsComponent implements OnInit {
     // tslint:disable-next-line:radix
     const idi = parseInt(this.route.snapshot.paramMap.get('id'));
     this.houseId = idi;
-    this.houseService.getHouses().subscribe(items => {
+    this.houseService.homes().subscribe(items => {
       const target = items.find(one => one.id === this.houseId);
       this.item = target;
+      console.log(this.item);
+
     });
   }
 

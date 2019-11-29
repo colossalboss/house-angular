@@ -68,8 +68,8 @@ import { AuthGuard } from './auth.guard';
       {path: 'register', component: RegisterComponent},
       {path: 'login', component: LoginComponent},
       {path: 'tenant', component: TenantComponent},
-      {path: 'school/:school', component: TenantComponent},
-      {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]}
+      {path: 'dashboard/house/:id', component: HouseDetailsComponent},
+      {path: 'dashboard', component: DashboardComponent}
     ])
   ],
   providers: [AuthGuard],

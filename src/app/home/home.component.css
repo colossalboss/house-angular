@@ -3,16 +3,18 @@
 }
 
 .bg {
-  background: url(src/assets/images/fine.jpg);
+  background: url(https://res.cloudinary.com/rumplestiltskin/image/upload/v1574974757/Beautiful-Single-Leaf-1920-x-1200_2_of4qh5.jpg);
 }
 
 .bg:hover {
   background-size: 105%;
   background-position: top;
+  transition: 5s;
 }
 
 .no-bd {
   border: none;
+  color: #8aaae5;
 }
 
 .card-body.links a {
@@ -20,14 +22,87 @@
 }
 
 .no-bg {
-  background: none !important;
+  background: #8aaae5 !important;
   margin: 3.5rem 0;
 }
 
 .jumbotron {
+  padding: 10rem 2rem;
   background: none !important;
   margin-bottom: 0;
 }
+
+.hd {
+  background-color: #8aaae5;
+  color: #fff;
+}
+
+.pr {
+  color: #fff !important;
+  background-color: #988ae5fa;
+}
+
+.fs {
+  font-size: 1.5rem;
+}
+
+.parent {
+  /* width: 45%; */
+  /* margin: 20px; */
+  /* height: 300px; */
+  border: 1px solid blue;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.child {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  background-image: url(https://res.cloudinary.com/rumplestiltskin/image/upload/v1566547682/my-photo/official_wvyphq.png);
+}
+
+.on-hover {
+  display: none;
+  font-size: 35px;
+  color: #ffffff !important;
+  font-family: sans-serif;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+  /*text-decoration: none;*/
+}
+
+.parent:hover .child, .parent:focus .child {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+  display: block;
+}
+
+.parent:hover .on-hover, .parent:focus .on-hover {
+  display: block;
+}
+
 
 .images-div {
   width: 30%;
@@ -36,9 +111,14 @@
 .all-images {
   width: 100%;
   margin: auto;
+  color: #8aaae5;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+#see-more {
+  color: #8aaae5;
 }
 
 .images-con {
@@ -62,10 +142,6 @@
   width: 100%;
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.38);
-}
-
-.bg {
-  background-image: url("https://res.cloudinary.com/rumplestiltskin/image/upload/v1574284751/House/fine_uy2wrj.jpg");
 }
 
 img:hover {
@@ -108,6 +184,7 @@ img:hover {
   width: 100%;
   padding: 1rem;
   margin: auto;
+  color: #8aaae5;
 }
 
 .rent-btn {
@@ -143,6 +220,7 @@ p {
 
 .message {
   width: 55%;
+  color: grey;
   text-align: justify;
 }
 
@@ -196,6 +274,10 @@ p {
   .ceo,
   .message {
     width: 100%;
+  }
+
+  .jumbotron {
+    padding: 5rem 1rem;
   }
 }
 
